@@ -18,3 +18,19 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+include:
+  - board: xiao_ble//zmk
+    shield: settings_reset
+  - board: xiao_ble//zmk
+    shield: seeed_xiao_round_display xiaord genfish_dongle
+    artifact-name: genfish_dongle
+    # snippet: zmk-usb-logging
+  - board: xiao_ble//zmk
+    shield: genfish_left
+    artifact-name: genfish_left_peripheral
+  - board: xiao_ble//zmk
+    shield: genfish_left
+    artifact-name: genfish_left_central
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+  - board: xiao_ble//zmk
+    shield: genfish_right
